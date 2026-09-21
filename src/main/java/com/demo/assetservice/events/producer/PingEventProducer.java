@@ -1,14 +1,15 @@
 package com.demo.assetservice.events.producer;
 
-import com.demo.assetservice.events.config.KafkaTopicConfig;
-import com.demo.events.avro.PingEvent;
+import java.time.Instant;
+import java.util.UUID;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
 
-import java.time.Instant;
-import java.util.UUID;
+import com.demo.assetservice.events.config.KafkaTopicConfig;
+import com.demo.shared.events.dto.PingEvent;
 
 @Service
 public class PingEventProducer {
